@@ -1,8 +1,10 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SearchBar from "./components/SearchBar";
-import UserDetails from "./pages/UserDetails";
 import styled from "styled-components";
+
+// Lazy load UserDetails
+const UserDetails = lazy(() => import("./pages/UserDetails"));
 
 const App = () => {
   return (
@@ -13,7 +15,14 @@ const App = () => {
           <SearchBar />
         </Header>
         <Routes>
-          <Route path="/user/:id" element={<UserDetails />} />
+          <Route
+            path="/user/:id"
+            element={
+              <Suspense fallback={<Message>Loading user details...</Message>}>
+                <UserDetails />
+              </Suspense>
+            }
+          />
         </Routes>
       </Container>
     </Router>
@@ -38,4 +47,11 @@ const Header = styled.header`
   max-width: 800px;
   padding: 10px 20px;
   border-bottom: 1px solid #ccc;
+`;
+
+const Message = styled.p`
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
 `;
