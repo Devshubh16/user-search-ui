@@ -1,74 +1,86 @@
-<<<<<<< HEAD
-# user-search-ui
-=======
-# Getting Started with Create React App
+# User Search Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 📌 Overview
+This is a **React-based Single Page Application (SPA)** that provides a **typeahead search** feature for users. It integrates with a **Spring Boot User API** to fetch user data and display detailed information upon selection.
 
-## Available Scripts
+## 🚀 Features
+- **Typeahead Search**: Fetches users dynamically as you type.
+- **User Details Page**: Displays user information, including an image.
+- **Atomic Design**: Modular and reusable component structure.
+- **Lazy Loading**: Optimized performance with on-demand loading.
+- **Responsive Design**: Works across all screen sizes.
+- **Exception Handling**: Graceful fallback for errors and missing data.
+- **Environment Layering**: Configurable API base URL via `.env`.
 
-In the project directory, you can run:
+## 📁 Project Structure
+```
+📦 user-search-frontend
+├── 📂 src
+│   ├── 📂 components (Reusable UI components)
+│   ├── 📂 pages (Page-level components)
+│   ├── 📂 hooks (Custom hooks like useDebounce)
+│   ├── 📂 services (API integration layer)
+│   ├── 📂 assets (Images, static files)
+│   ├── App.js (Routing and main layout)
+│   ├── index.js (Entry point)
+├── .env (Environment variables)
+├── package.json (Dependencies & scripts)
+├── README.md (This document)
+```
 
-### `npm start`
+## 🛠️ Installation & Setup
+### **1️⃣ Prerequisites**
+- **Node.js** (Latest LTS version recommended)
+- **npm or yarn** (Package manager)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **2️⃣ Clone Repository**
+```sh
+git clone https://github.com/your-repo/user-search-frontend.git
+cd user-search-frontend
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **3️⃣ Install Dependencies**
+```sh
+npm install
+# OR
+yarn install
+```
 
-### `npm test`
+### **4️⃣ Set Up Environment Variables**
+Create a `.env` file in the root directory and configure API settings:
+```
+REACT_APP_API_BASE_URL=http://localhost:8080/api
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **5️⃣ Start Development Server**
+```sh
+npm start
+# OR
+yarn start
+```
+Runs the app in development mode at `http://localhost:3000/`.
 
-### `npm run build`
+## 📦 Build for Production
+```sh
+npm run build
+# OR
+yarn build
+```
+Creates an optimized production build in the `build/` folder.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 Code Quality & Best Practices
+- **Atomic Design** for maintainable components.
+- **Code Linting** using ESLint & Prettier.
+- **Lazy Loading** for optimized performance.
+- **Responsive UI** with CSS Modules & Styled-components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🤝 Contributing
+1. **Fork** the repository.
+2. **Create a new branch** (`feature-branch`).
+3. **Commit your changes**.
+4. **Push to GitHub** and open a **pull request**..
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📬 Contact
+For any queries or suggestions, reach out at **shubhanshu16116716@gmail.com**.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> b186ef0 (Initial-commit)
